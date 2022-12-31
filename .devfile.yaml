@@ -2,6 +2,34 @@ schemaVersion: 2.1.0
 metadata:
   name: tilt-n-quarkus
 attributes:
+  .che/che-theia-plugins.yaml: |
+    - id: ms-python/python/latest
+      override:
+        sidecar: {}
+    - id: redhat/vscode-yaml/latest
+      override:
+        sidecar: {}
+    - id: redhat/vscode-xml/latest
+      override:
+        sidecar: {}
+    - id: vscode/typescript-language-features/latest
+      override:
+        sidecar: {}
+    - id: bmewburn/vscode-intelephense-client/latest
+      override:
+        sidecar: {}
+  .vscode/extensions.json: |-
+    {
+      "recommendations": [
+        "ms-python/python",
+        "redhat/vscode-yaml",
+        "redhat/vscode-xml",
+        "vscode/typescript-language-features",
+        "bmewburn/vscode-intelephense-client"
+      ]
+    }
+  metadata-name-field: generateName
+  metadata-name-original-value: ansible-demo
   controller.devfile.io/storage-type: ephemeral
   controller.devfile.io/scc: container-build
 components:
